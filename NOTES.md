@@ -5,7 +5,7 @@ Player (name, email, pw) -- player should be able to create game -- /player/:id/
 - has many players_rosters
 - has many rosters through players_rosters
 
-Players_Roster (player_id, roster_id)
+Player_Roster (player_id, roster_id)
 - belongs to player
 - belongs to roster
 
