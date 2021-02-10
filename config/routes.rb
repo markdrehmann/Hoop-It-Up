@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'welcome#home'
   resources :games
   resources :rosters
   resources :courts
