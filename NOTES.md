@@ -1,25 +1,24 @@
 Models
 
 Player (name, email, pw) -- player should be able to create game -- /player/:id/game/new
-- has many games (through roster)
+- has many games (through roster)?
 - has many players_rosters
 - has many rosters through players_rosters
-<!-- - plays at (has) many courts, through games or rosters? -->
 
 Players_Roster
 - belongs to player
 - belongs to roster
-- date ****
-- available_spots? or would this be on roster?
 
 Roster (player_ids?, game_id)
 - has many players_rosters
 - has many players, through players_rosters
+--
 - belongs to a game
+- has many courts through games
 
 Game (day, time, roster_id?, player_ids?, court_id)
 - belongs to a court
-- has_one Roster
+- belongs to a Roster
 
 Court (name, address)
 - has many games
