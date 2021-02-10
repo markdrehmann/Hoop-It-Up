@@ -10,13 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_10_045533) do
+ActiveRecord::Schema.define(version: 2021_02_10_222840) do
 
   create_table "courts", force: :cascade do |t|
     t.string "name"
     t.string "address"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "games", force: :cascade do |t|
+    t.string "day"
+    t.string "time"
+    t.integer "court_id", null: false
+    t.integer "roster_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["court_id"], name: "index_games_on_court_id"
+    t.index ["roster_id"], name: "index_games_on_roster_id"
+  end
+
+  create_table "player_rosters", force: :cascade do |t|
+    t.integer "player_id", null: false
+    t.integer "roster_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["player_id"], name: "index_player_rosters_on_player_id"
+    t.index ["roster_id"], name: "index_player_rosters_on_roster_id"
   end
 
   create_table "players", force: :cascade do |t|
@@ -27,4 +47,14 @@ ActiveRecord::Schema.define(version: 2021_02_10_045533) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "rosters", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  add_foreign_key "games", "courts"
+  add_foreign_key "games", "rosters"
+  add_foreign_key "player_rosters", "players"
+  add_foreign_key "player_rosters", "rosters"
 end
