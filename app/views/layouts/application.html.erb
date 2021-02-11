@@ -14,6 +14,9 @@
     <header>
       <nav>
         <div class="topnav">
+        <% if current_player.present? %>
+          <%= link_to "Logout", "/logout" %>
+        <% end %>
         <a href="#news">News</a>
         <a href="#contact">Contact</a>
         <a href="#about">About</a>
@@ -24,6 +27,6 @@
     </header>
 
     <%= yield %>
-    
+
   </body>
 </html>
