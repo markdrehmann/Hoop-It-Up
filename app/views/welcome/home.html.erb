@@ -1,8 +1,11 @@
-<h1>It starts...</h1>
+<center>
+<h2>Welcome!</h2>
 
-Sign Up
-<br><br>
+<%= button_to "Sign Up", new_player_path, :method => "get" %>
+<br>
 or 
 <br><br>
 
-Log In
+<%= button_to "Log In", '/login', :method => "get" %>
+
+</center>
