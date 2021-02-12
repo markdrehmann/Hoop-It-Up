@@ -14,7 +14,7 @@
     <header>
       <nav>
         <div class="topnav">
-        <% if current_player.present? %>
+        <% if logged_in? %>
           <%= link_to "Logout", "/logout" %>
         <% end %>
         <a href="#news">News</a>
