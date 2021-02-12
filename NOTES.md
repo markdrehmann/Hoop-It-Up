@@ -1,8 +1,3 @@
-<% if current_player.present? %>
-          <%= link_to "Logout", "/logout" %>
-        <% end %>
-
-
 Models
 
 Player (name, email, pw) -- player should be able to create game -- /player/:id/game/new
