@@ -19,6 +19,7 @@
           <%= link_to "Games", games_path %>
           <%= link_to "Courts", courts_path %>
         <% else %>
+          <%= link_to "Sign in with Google" %>
           <%= link_to "Sign Up", new_player_path %>
           <%= link_to "Log In", '/login' %>
         <% end %>
