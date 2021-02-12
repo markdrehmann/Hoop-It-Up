@@ -37,3 +37,13 @@ header h1 {
     color: black;
   }
 
+.error {
+    border-color: red;
+    color: red;
+    border-style: solid;
+}
+
+.alert {
+    border-color: green;
+    color: green;
+}

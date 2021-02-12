@@ -29,11 +29,11 @@
     </header>
     <center>
     <% if flash[:error] %>
-      <h4><%= flash[:error] %></h4>
+      <div class="error"><h4><%= flash[:error] %></h4></div>
     <% end %>
 
     <% if flash[:alert] %>
-      <h4><%= flash[:alert] %></h4>
+      <div class="alert"><h4><%= flash[:alert] %></h4></div>
     <% end %>
     </center>
 
