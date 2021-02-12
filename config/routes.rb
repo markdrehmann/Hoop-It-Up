@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   resources :players
 
   get '/login', to: 'sessions#login'
+  post '/login', to: 'sessions#create'
   get '/logout', to: 'sessions#logout'
 end
