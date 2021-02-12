@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
             session[:player_id] = @player.id
             redirect_to player_path(@player)
         else
-            flash[:error] = "Error"
+            flash[:error] = "Invalid Login!"
             render :login
         end
     end
