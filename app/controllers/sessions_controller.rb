@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
             redirect_to player_path(@player)
         else
             flash[:error] = "Invalid Login!"
-            render :login
+            redirect_to :login
         end
     end
 
