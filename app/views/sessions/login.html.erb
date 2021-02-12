@@ -1,1 +1,13 @@
-<h3>Log In Page</h1>
+<center>
+<h3>Log In</h3>
+
+<%= form_tag '/sessions/create' do %>
+    <%= label_tag "email", "Email:" %>
+    <%= text_field_tag "email" %><br><br>
+
+    <%= label_tag "password", "Password:" %>
+    <%= password_field_tag "password" %><br><br>
+
+    <%= submit_tag "Log In" %>
+<% end %>
+</center>
