@@ -16,10 +16,11 @@
         <div class="topnav">
         <% if logged_in? %>
           <%= link_to "Logout", "/logout" %>
+          <%= link_to "Games", games_path %>
+          <%= link_to "Courts", courts_path %>
         <% else %>
-          <a href="#news">News</a>
-          <a href="#contact">Contact</a>
-          <a href="#about">About</a>
+          <a href="#news">Sign Up</a>
+          <a href="#contact">Log In</a>
         <% end %>
         <%= link_to "Home", root_path %>
         </div>
