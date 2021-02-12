@@ -1,6 +1,6 @@
 Models
 
-Player (name, email, pw) -- player should be able to create game -- /player/:id/game/new
+Player (name, email, pw)
 Scope method, player with most_rosters?
 - *** has many games (through roster)?
 - has many player_rosters
@@ -21,6 +21,6 @@ Game (day, time, roster_id, court_id)
 - belongs to a court
 - belongs to a Roster
 
-Court (name, address)
+Court (name, address) /courts/:id/games/new
 - has many games
 - has many rosters, through games
