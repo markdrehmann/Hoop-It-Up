@@ -1,1 +1,20 @@
-<h3>Courts Index</h3>
+<center>
+<h3>Courts</h3>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Address</th>
+    </tr>
+    <% @courts.each do |court| %>
+    <tr>
+        <td><%= court.name %></td>
+        <td><%= court.address %></td>
+    </tr>
+    <% end %>
+
+
+</table>
+
+
+</center>
