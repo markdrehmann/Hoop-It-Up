@@ -23,6 +23,15 @@
       </nav>
       <h1>Hoop It Up</h1>
     </header>
+    <center>
+    <% if flash[:error] %>
+      <h4><%= flash[:error] %></h4>
+    <% end %>
+
+    <% if flash[:alert] %>
+      <h4><%= flash[:alert] %></h4>
+    <% end %>
+    </center>
 
     <%= yield %>
 

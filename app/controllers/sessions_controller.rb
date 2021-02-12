@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
             session[:player_id] = @player.id
             redirect_to player_path(@player)
         else
-            flash[:error] = @player.errors.full_messages.to_sentence
+            flash[:error] = "Error"
             render :login
         end
     end
