@@ -1,6 +1,10 @@
 <center>
     <h3><%= @player.name %>'s Home Page</h3>
 
+    <h4>Your Games</h4> ### UNLESS PLAYER HAS NO GAMES - CREATES ERROR
+    <% @player.games.each do |game| %>
+        <%= game.court.name %> -- <%= game.time.to_formatted_s(:gametime) %>
+    <% end %>
 
 
 </center>

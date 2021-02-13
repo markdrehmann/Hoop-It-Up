@@ -5,4 +5,12 @@ class Player < ApplicationRecord
     validates :email, uniqueness: true, presence: true
     validates :password, presence: true
     validates :name, presence: true
+
+    def games
+        self.rosters.map do |r|
+            r.games.each do |g|
+                g
+            end
+        end.first
+    end
 end
