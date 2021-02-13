@@ -15,7 +15,7 @@ class GamesController < ApplicationController
         @game = Game.new(game_params)
         roster = Roster.create
         roster.players << current_player
-        @game.roster_id = roster.id
+        @game.roster = roster
         if @game.save
             flash[:alert] = "New Game Created!"
             redirect_to player_path(current_player)
