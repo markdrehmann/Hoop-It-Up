@@ -4,7 +4,7 @@
     <h4>Your Games</h4>
     <% if @player.games %>
         <% @player.games.each do |game| %>
-            <%= game.court.name %> -- <%= game.time.to_formatted_s(:gametime) %>
+            <%= game.court.name %> -- <%= game.gametime %>
         <% end %>
     <% else %>
         <p>No Scheduled Games</p>
