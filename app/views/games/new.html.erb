@@ -1,0 +1,17 @@
+<center>
+
+<h3>New Game, Roundhead</h3>
+
+<div class="form">
+    <%= form_for @game do |f| %>
+        <%= f.label :court %>
+        <%= f.collection_select :court_id, Court.all, :id, :name  %><br><br>
+        <%= f.label :time %>
+        <%= f.datetime_field :time %><br><br>
+        <%= f.submit %>
+    <% end %>
+</div>
+
+
+
+</center>
