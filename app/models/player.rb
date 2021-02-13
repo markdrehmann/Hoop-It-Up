@@ -7,10 +7,12 @@ class Player < ApplicationRecord
     validates :name, presence: true
 
     def games # THIS IS BROKEN, ONLY SHOWS FIRST GAME...
-        self.rosters.map do |r|
-            r.games.map do |g|
-                g
+        g = []
+        self.rosters.each do |r|
+            r.games.each do |game|
+                g << game
             end
-        end.first
+        end
+        g
     end
 end
