@@ -6,13 +6,13 @@ class Player < ApplicationRecord
     validates :password, presence: true
     validates :name, presence: true
 
-    def games # THIS IS BROKEN, ONLY SHOWS FIRST GAME...
-        g = []
+    def games
+        game_array = []
         self.rosters.each do |r|
-            r.games.each do |game|
-                g << game
+            r.games.each do |g|
+                game_array << g
             end
         end
-        g
+        game_array
     end
 end
