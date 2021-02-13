@@ -6,9 +6,9 @@ class Player < ApplicationRecord
     validates :password, presence: true
     validates :name, presence: true
 
-    def games
+    def games # THIS IS BROKEN, ONLY SHOWS FIRST GAME...
         self.rosters.map do |r|
-            r.games.each do |g|
+            r.games.map do |g|
                 g
             end
         end.first
