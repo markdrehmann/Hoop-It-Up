@@ -13,4 +13,12 @@ class Game < ApplicationRecord
     games = Game.all
     games.sort_by(&:time)
   end
+
+  def self.upcoming
+    games = Game.all.where("time > ?", DateTime.now).sort_by(&:time)
+  end
+
+  def self.past
+    games = Game.all.where("time < ?", DateTime.now).sort_by(&:time)
+  end
 end
