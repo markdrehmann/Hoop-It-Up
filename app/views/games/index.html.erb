@@ -5,12 +5,14 @@
 <table>
     <tr>
         <th>Location</th>
-        <th>But what time?</th>
+        <th>Time</th>
+        <th>Join Game!</th>
     </tr>
     <% @games.each do |game| %>
     <tr>
         <td><%= link_to game.court.name, court_path(game.court) %></td>
         <td><%= game.time.to_formatted_s(:gametime) %></td>
+        <td><%= link_to "Join this game", edit_roster_path(game.roster) %></td>
     </tr>
     <% end %>
 </table>
