@@ -1,0 +1,1 @@
+Time::DATE_FORMATS[:gametime] = '%A,  %b %e at  %l:%M %P'

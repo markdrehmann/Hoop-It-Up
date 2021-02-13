@@ -10,7 +10,7 @@
     <% @games.each do |game| %>
     <tr>
         <td><%= link_to game.court.name, court_path(game.court) %></td>
-        <td><%= game.day + " at " + game.time.to_s %></td>
+        <td><%= game.time.to_formatted_s(:gametime) %></td>
     </tr>
     <% end %>
 </table>
