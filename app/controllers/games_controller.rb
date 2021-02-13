@@ -1,6 +1,7 @@
 class GamesController < ApplicationController
     def index
-        @games = Game.games_in_order
+        @upcoming_games = Game.upcoming
+        @past_games = Game.past
     end
 
     def show

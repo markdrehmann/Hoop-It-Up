@@ -1,6 +1,6 @@
 <center>
 
-<h3>All Games</h3>
+<h3>Upcoming Games</h3>
 
 <table>
     <tr>
@@ -8,7 +8,7 @@
         <th>Time</th>
         <th>Join Game!</th>
     </tr>
-    <% @games.each do |game| %>
+    <% @upcoming_games.each do |game| %>
     <tr>
         <td><%= link_to game.court.name, court_path(game.court) %></td>
         <td><%= game.gametime %></td>
@@ -20,5 +20,22 @@
 <br><br>
 
 <%= link_to "Create New Game", new_game_path %>
+
+<br><br>
+
+<h3>Past Games</h3>
+
+<table>
+    <tr>
+        <th>Location</th>
+        <th>Time</th>
+    </tr>
+    <% @past_games.each do |game| %>
+    <tr>
+        <td><%= link_to game.court.name, court_path(game.court) %></td>
+        <td><%= game.gametime %></td>
+    </tr>
+    <% end %>
+</table>
 
 </center>

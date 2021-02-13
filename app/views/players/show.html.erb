@@ -1,7 +1,7 @@
 <center>
     <h3><%= @player.name %>'s Home Page</h3>
 
-    <h4>Your Games</h4>
+    <h4>Your Upcoming Games</h4>
     <% if @player.games %>
             <table>
             <tr>
@@ -9,7 +9,7 @@
                 <th>Time</th>
                 <th>Leave Game</th>
             </tr>
-            <% @player_games.each do |game| %>
+            <% @player_upcoming_games.each do |game| %>
             <tr>
                 <td><%= link_to game.court.name, court_path(game.court) %></td>
                 <td><%= game.gametime %></td>
