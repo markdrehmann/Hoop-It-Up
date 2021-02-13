@@ -7,9 +7,9 @@
             <tr>
                 <th>Location</th>
                 <th>Time</th>
-                <th>Drop Game</th>
+                <th>Leave Game</th>
             </tr>
-            <% @player.games.each do |game| %>
+            <% @player_games.each do |game| %>
             <tr>
                 <td><%= link_to game.court.name, court_path(game.court) %></td>
                 <td><%= game.gametime %></td>
