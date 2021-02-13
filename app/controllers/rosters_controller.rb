@@ -12,4 +12,11 @@ class RostersController < ApplicationController
         end
     end
 
+    def leave
+        roster = Roster.find(params[:id])
+        roster.players.delete(current_player)
+        flash[:alert] = "You've left a game"
+        redirect_to player_path(current_player)
+    end
+
 end

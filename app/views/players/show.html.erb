@@ -3,9 +3,20 @@
 
     <h4>Your Games</h4>
     <% if @player.games %>
-        <% @player.games.each do |game| %>
-            <%= game.court.name %> -- <%= game.gametime %><br><br>
-        <% end %>
+            <table>
+            <tr>
+                <th>Location</th>
+                <th>Time</th>
+                <th>Drop Game</th>
+            </tr>
+            <% @player.games.each do |game| %>
+            <tr>
+                <td><%= link_to game.court.name, court_path(game.court) %></td>
+                <td><%= game.gametime %></td>
+                <td><%= link_to "Leave game", "/leave/#{game.roster.id}" %></td>
+            </tr>
+            <% end %>
+            </table>
     <% else %>
         <p>No Scheduled Games</p>
     <% end %>
