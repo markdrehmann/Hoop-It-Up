@@ -1,2 +1,18 @@
+<center>
+
 <h3>Games</h3>
 
+<table>
+    <tr>
+        <th>Location</th>
+        <th>But what time?</th>
+    </tr>
+    <% @games.each do |game| %>
+    <tr>
+        <td><%= link_to game.court.name, court_path(game.court) %></td>
+        <td><%= game.day + " at " + game.time %></td>
+    </tr>
+    <% end %>
+</table>
+
+</center>
