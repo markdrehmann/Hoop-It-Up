@@ -51,7 +51,14 @@ header h1 {
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  width: 50%;
+  width: 60%;
+}
+
+.roster {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 35%;
+  text-align: center;
 }
 
 td, th {

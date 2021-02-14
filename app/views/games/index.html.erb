@@ -6,12 +6,14 @@
     <tr>
         <th>Location</th>
         <th>Time</th>
+        <th>Who's Playing?</th>
         <th>Join Game!</th>
     </tr>
     <% @upcoming_games.each do |game| %>
     <tr>
         <td><%= link_to game.court.name, court_path(game.court) %></td>
         <td><%= game.gametime %></td>
+        <td><%= link_to "See Roster", roster_path(game.roster) %></td>
         <td><%= link_to "Join this game", edit_roster_path(game.roster) %></td>
     </tr>
     <% end %>

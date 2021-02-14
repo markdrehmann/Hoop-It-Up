@@ -19,4 +19,8 @@ class RostersController < ApplicationController
         redirect_to player_path(current_player)
     end
 
+    def show
+        @roster = Roster.find(params[:id])
+    end
+
 end

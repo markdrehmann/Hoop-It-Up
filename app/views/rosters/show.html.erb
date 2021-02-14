@@ -1,0 +1,14 @@
+<center>
+
+<table class = "roster">
+    <tr>
+        <th class = "roster">Roster</th>
+    </tr>
+    <% @roster.players.each do |player| %>
+    <tr>
+        <td class = "roster"><%= player.name %></td>
+    </tr>
+    <% end %>
+</table>
+
+</center>
