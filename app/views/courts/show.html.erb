@@ -3,6 +3,20 @@
 <p><%= @court.address %></p>
 
 <h4>Upcoming Games at <%= @court.name %></h4>
+<table>
+    <tr>
+        <th>Time</th>
+        <th>Who's Playing?</th>
+        <th>Join Game!</th>
+    </tr>
+    <% @court_upcoming_games.each do |game| %>
+    <tr>
+        <td><%= game.gametime %></td>
+        <td><%= link_to "See Roster", roster_path(game.roster) %></td>
+        <td><%= link_to "Join this game", edit_roster_path(game.roster) %></td>
+    </tr>
+    <% end %>
+</table>
 
 
 </center>
