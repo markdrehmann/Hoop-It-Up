@@ -8,7 +8,7 @@
     </tr>
     <% @courts.each do |court| %>
     <tr>
-        <td><%= link_to court.name, court_path(court) %></td>
+        <td><%= link_to court.name, court_games_path(court) %></td>
         <td><%= court.address %></td>
     </tr>
     <% end %>

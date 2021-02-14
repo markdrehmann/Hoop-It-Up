@@ -1,6 +1,11 @@
 <center>
 
-<h3>Upcoming Games</h3>
+<% if @court %>
+    <h3>Upcoming Games at <%= @court.name %></h3>
+    <p><%= @court.address %></p>
+<% else %>
+    <h3>Upcoming Games</h3>
+<% end %>
 
 <table>
     <tr>
@@ -21,10 +26,15 @@
 
 <br><br>
 
-<%= link_to "Create New Game", new_game_path %>
+<% if @court %>
+    <%= link_to "Add New Game at #{@court.name}", new_court_game_path(@court.id) %>
+<% else %>
+    <%= link_to "Create New Game", new_game_path %>
+<% end %>
 
 <br><br>
 
+<% if !@court %>
 <h3>Past Games</h3>
 
 <table>
@@ -39,5 +49,6 @@
     </tr>
     <% end %>
 </table>
+<% end %>
 
 </center>
