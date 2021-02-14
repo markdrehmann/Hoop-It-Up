@@ -13,7 +13,7 @@ Specs:
 - [x] Include login (how e.g. Devise)
 - [x] Include logout (how e.g. Devise)
 - [ ] Include third party signup/login (how e.g. Devise/OmniAuth)
-- [ ] Include nested resource show or index (URL e.g. users/2/recipes)
+- [x] Include nested resource show or index -- courts/1/games
 - [x] Include nested resource "new" form -- courts/1/games/new
 - [ ] Include form display of validation errors (form URL e.g. /recipes/new)
 
