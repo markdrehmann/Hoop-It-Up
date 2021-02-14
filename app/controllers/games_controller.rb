@@ -10,6 +10,7 @@ class GamesController < ApplicationController
 
     def new
         @game = Game.new
+        # raise params.inspect
     end
 
     def create

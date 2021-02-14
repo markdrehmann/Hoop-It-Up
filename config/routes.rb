@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   root 'welcome#home'
   resources :games
   resources :rosters
-  resources :courts
+  resources :courts do
+    resources :games, only: [:new, :index]
+  end
   resources :players
 
   get '/login', to: 'sessions#login'
