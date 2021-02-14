@@ -1,24 +1,36 @@
-# README
+# Hoop It Up on Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to Hoop It Up on Rails!  This app was created with the intention
+to create and track pickup basketball games.  It is a basic Rails project to fulfill project requirements at Flatiron School. Further functionality and development will continue in later projects.
 
-Things you may want to cover:
+## Installation
 
-* Ruby version
+Clone this repository and execute:
 
-* System dependencies
+    $bundle install
 
-* Configuration
+Then execute:
 
-* Database creation
+    $rails db:migrate
 
-* Database initialization
+to create the database.
 
-* How to run the test suite
+Execute:
 
-* Services (job queues, cache servers, search engines, etc.)
+    $rails s
 
-* Deployment instructions
+and navigate to localhost:3000 to preview the app.
 
-* ...
+
+## Usage
+
+Usage of this Rails basic CRUD app is for the sole purposes of entertainment and interacting with
+a preliminary basketball scheduling app.
+
+## License
+
+The app is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
+## Code of Conduct
+
+Everyone interacting in the Hoop It Up on Rails project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the code of conduct.
