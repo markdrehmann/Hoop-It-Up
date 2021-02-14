@@ -15,7 +15,7 @@ Specs:
 - [ ] Include third party signup/login (how e.g. Devise/OmniAuth)
 - [x] Include nested resource show or index -- courts/1/games
 - [x] Include nested resource "new" form -- courts/1/games/new
-- [ ] Include form display of validation errors (form URL e.g. /recipes/new)
+- [x] Include form display of validation errors -- players/new, courts/new, and games/new
 
 Confirm:
 - [x] The application is pretty DRY
