@@ -18,8 +18,9 @@ class PlayersController < ApplicationController
 
     def show
         @player = current_player
-        @player_upcoming_games = @player.games.where("time > ?", DateTime.now).sort_by(&:time)
-        @player_past_games = @player.games.where("time < ?", DateTime.now).sort_by(&:time)
+        @player_games = @player.games.sort_by(&:time)
+        @player_upcoming_games = @player_games.select { |g| g.time > DateTime.now }
+        @player_past_games = @player_games.select { |g| g.time < DateTime.now }
     end
 
     private
