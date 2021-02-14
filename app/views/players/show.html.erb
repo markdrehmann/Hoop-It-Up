@@ -2,8 +2,7 @@
     <h3><%= @player.name %>'s Home Page</h3>
 
     <h4>Your Upcoming Games</h4>
-    <% if @player.games %>
-            <table>
+        <table>
             <tr>
                 <th>Location</th>
                 <th>Time</th>
@@ -16,10 +15,22 @@
                 <td><%= link_to "Leave game", "/leave/#{game.roster.id}" %></td>
             </tr>
             <% end %>
-            </table>
-    <% else %>
-        <p>No Scheduled Games</p>
-    <% end %>
+        </table>
+    
+<br><br>
 
+    <h4>Your Past Games</h4>
+        <table>
+            <tr>
+                <th>Location</th>
+                <th>Time</th>
+            </tr>
+            <% @player_past_games.each do |game| %>
+            <tr>
+                <td><%= link_to game.court.name, court_path(game.court) %></td>
+                <td><%= game.gametime %></td>
+            </tr>
+            <% end %>
+        </table>
 
 </center>
