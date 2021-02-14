@@ -16,7 +16,7 @@
     </tr>
     <% @upcoming_games.each do |game| %>
     <tr>
-        <td><%= link_to game.court.name, court_path(game.court) %></td>
+        <td><%= link_to game.court.name, court_games_path(game.court) %></td>
         <td><%= game.gametime %></td>
         <td><%= link_to "See Roster", roster_path(game.roster) %></td>
         <td><%= link_to "Join this game", edit_roster_path(game.roster) %></td>
@@ -44,7 +44,7 @@
     </tr>
     <% @past_games.each do |game| %>
     <tr>
-        <td><%= link_to game.court.name, court_path(game.court) %></td>
+        <td><%= link_to game.court.name, court_games_path(game.court) %></td>
         <td><%= game.gametime %></td>
     </tr>
     <% end %>

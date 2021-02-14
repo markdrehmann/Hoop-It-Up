@@ -10,7 +10,7 @@
             </tr>
             <% @player_upcoming_games.each do |game| %>
             <tr>
-                <td><%= link_to game.court.name, court_path(game.court) %></td>
+                <td><%= link_to game.court.name, court_games_path(game.court) %></td>
                 <td><%= game.gametime %></td>
                 <td><%= link_to "Leave game", "/leave/#{game.roster.id}" %></td>
             </tr>
