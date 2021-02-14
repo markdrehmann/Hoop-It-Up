@@ -11,7 +11,6 @@ class PlayersController < ApplicationController
             flash[:alert] = "Player Created!"
             redirect_to player_path(@player)
         else
-            flash[:error] = @player.errors.full_messages.to_sentence
             render :new
         end
     end

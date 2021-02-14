@@ -5,11 +5,23 @@
 <div class="form">
     <%= form_for @player do |f| %>
         <%= f.label :name %>
-        <%= f.text_field :name %><br><br>
+        <%= f.text_field :name %>
+        <% if @player.errors[:name] %>
+            <%= @player.errors[:name].to_sentence %>
+        <% end %>
+        <br><br>
         <%= f.label :email %>
-        <%= f.text_field :email %><br><br>
+        <%= f.text_field :email %>
+        <% if @player.errors[:email] %>
+            <%= @player.errors[:email].to_sentence %>
+        <% end %>
+        <br><br>
         <%= f.label :password %>
-        <%= f.password_field :password %><br><br>
+        <%= f.password_field :password %>
+        <% if @player.errors[:password] %>
+            <%= @player.errors[:password].to_sentence %>
+        <% end %>
+        <br><br>
         
         <%= f.submit %>
     <% end %>

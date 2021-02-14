@@ -19,7 +19,7 @@ class CourtsController < ApplicationController
             redirect_to courts_path
         else
             flash[:error] = "oops"
-            redirect_to new_court_path
+            render new_court_path
         end
     end
 
