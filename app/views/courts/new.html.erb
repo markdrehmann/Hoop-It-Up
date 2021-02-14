@@ -1,6 +1,15 @@
 <center>
 <h3>Add a New Court</h3>
 
+<div class="form">
+    <%= form_for @court do |f| %>
+        <%= f.label :name %>
+        <%= f.text_field :name  %><br><br>
+        <%= f.label :address %>
+        <%= f.text_field :address %><br><br>
+        <%= f.submit %>
+    <% end %>
+</div>
 
 
 </center>

@@ -13,7 +13,14 @@ class CourtsController < ApplicationController
     end
 
     def create
-        raise params.inspect
+        @court = Court.new(court_params)
+        if @court.save
+            flash[:alert] = "New Court Added"
+            redirect_to courts_path
+        else
+            flash[:error] = "oops"
+            redirect_to new_court_path
+        end
     end
 
     private
