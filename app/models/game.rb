@@ -9,7 +9,7 @@ class Game < ApplicationRecord
     time.to_formatted_s(:gametime)
   end
 
-  def self.games_in_order
+  def self.games_in_order # This may be unnecessary
     games = Game.all
     games.sort_by(&:time)
   end
