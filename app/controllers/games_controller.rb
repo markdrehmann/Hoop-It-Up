@@ -2,8 +2,8 @@ class GamesController < ApplicationController
     def index
         if params[:court_id]
             @court = Court.find(params[:court_id])
-            @upcoming_games = @court.games.select { |g| g.time > DateTime.now }.sort_by(&:time)
-            @past_games = Game.past
+            @upcoming_games = Game.upcoming.select { |g| g.court == @court }
+            @past_games = Game.past.select { |g| g.court == @court }
         else
             @upcoming_games = Game.upcoming
             @past_games = Game.past
