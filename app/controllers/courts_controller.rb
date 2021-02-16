@@ -3,11 +3,6 @@ class CourtsController < ApplicationController
         @courts = Court.all
     end
 
-    def show
-        @court = Court.find(params[:id])
-        @court_upcoming_games = @court.games.select { |g| g.time > DateTime.now }.sort_by(&:time)
-    end
-
     def new
         @court = Court.new
     end
