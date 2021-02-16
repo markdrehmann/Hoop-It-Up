@@ -15,4 +15,12 @@ class Player < ApplicationRecord
         end
         game_array
     end
+
+    def upcoming_games
+        games.select { |g| g.time > DateTime.now }.sort_by(&:time)
+    end
+
+    def past_games
+        games.select { |g| g.time < DateTime.now }.sort_by(&:time)
+    end
 end

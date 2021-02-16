@@ -8,7 +8,7 @@
                 <th>Time</th>
                 <th>Leave Game</th>
             </tr>
-            <% @player_upcoming_games.each do |game| %>
+            <% @player.upcoming_games.each do |game| %>
             <tr>
                 <td><%= link_to game.court.name, court_games_path(game.court) %></td>
                 <td><%= game.gametime %></td>
@@ -25,7 +25,7 @@
                 <th>Location</th>
                 <th>Time</th>
             </tr>
-            <% @player_past_games.each do |game| %>
+            <% @player.past_games.each do |game| %>
             <tr>
                 <td><%= link_to game.court.name, court_path(game.court) %></td>
                 <td><%= game.gametime %></td>
