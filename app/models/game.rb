@@ -9,11 +9,6 @@ class Game < ApplicationRecord
     time.to_formatted_s(:gametime)
   end
 
-  def self.games_in_order # This may be unnecessary
-    games = Game.all
-    games.sort_by(&:time)
-  end
-
   def self.upcoming
     games = Game.all.where("time > ?", DateTime.now).sort_by(&:time)
   end
