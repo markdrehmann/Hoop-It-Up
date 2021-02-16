@@ -2,7 +2,7 @@ class GamesController < ApplicationController
     def index
         if params[:court_id]
             @court = Court.find(params[:court_id])
-            @upcoming_games = Game.upcoming.select { |g| g.court == @court }
+            @upcoming_games = Game.upcoming.select { |g| g.court == @court } # make this a court method #upcoming, still set instance variable for view
             @past_games = Game.past.select { |g| g.court == @court }
         else
             @upcoming_games = Game.upcoming
