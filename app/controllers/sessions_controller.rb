@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
     end
 
     def create
-        # raise params.inspect
+        # raise params.inspect # for third party authentication
         @player = Player.find_by(email: params[:email])
         if @player && @player.authenticate(params[:password])
             session[:player_id] = @player.id
