@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
   root 'welcome#home'
+  resources :players
   resources :games
-  resources :rosters
+  # resources :rosters
+  resources :rosters, only: [:show, :edit]
   resources :courts do
     resources :games, only: [:new, :index]
   end
-  resources :players
 
   # match '/auth/github/callback', to: 'sessions#create', via: [:get, :post]
   get '/auth/github/callback' => 'sessions#create'
