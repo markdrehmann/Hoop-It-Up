@@ -12,7 +12,7 @@ Specs:
 - [x] Include signup (how e.g. Devise)
 - [x] Include login (how e.g. Devise)
 - [x] Include logout (how e.g. Devise)
-- [ ] Include third party signup/login (how e.g. Devise/OmniAuth)
+- [x] Include third party signup/login (how e.g. Devise/OmniAuth) -- omniauth github
 - [x] Include nested resource show or index -- courts/1/games
 - [x] Include nested resource "new" form -- courts/1/games/new
 - [x] Include form display of validation errors -- players/new, courts/new, and games/new
