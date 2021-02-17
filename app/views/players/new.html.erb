@@ -6,7 +6,7 @@
     <%= form_for @player do |f| %>
         <%= f.label :name %>
         <%= f.text_field :name %>
-        <% if @player.errors[:name] # can i make a method for this? %> 
+        <% if @player.errors[:name] %> 
             <%= @player.errors[:name].to_sentence %>
         <% end %>
         <br><br>
