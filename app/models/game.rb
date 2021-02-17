@@ -4,16 +4,11 @@ class Game < ApplicationRecord
   validates :court_id, presence: true
   validates :roster_id, presence: true
   validates :time, presence: true
+  scope :upcoming, -> { where("time > ?", Time.current).sort_by(&:time) }
+  scope :past, -> { where("time < ?", Time.current).sort_by(&:time) }
 
   def gametime
     time.to_formatted_s(:gametime)
   end
 
-  def self.upcoming
-    games = Game.all.where("time > ?", DateTime.now).sort_by(&:time)
-  end
-
-  def self.past
-    games = Game.all.where("time < ?", DateTime.now).sort_by(&:time)
-  end
 end
