@@ -4,5 +4,4 @@ class Roster < ApplicationRecord
 
   has_many :games
   has_many :courts, through: :games
-
 end
