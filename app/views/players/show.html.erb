@@ -1,33 +1,35 @@
 <h3><%= @player.name %>'s Home Page</h3>
 
-    <h4>Your Upcoming Games</h4>
-        <table>
-            <tr>
-                <th>Location</th>
-                <th>Time</th>
-                <th>Leave Game</th>
-            </tr>
-            <% @player.upcoming_games.each do |game| %>
-            <tr>
-                <td><%= link_to game.court.name, court_games_path(game.court) %></td>
-                <td><%= game.gametime %></td>
-                <td><%= link_to "Leave game", "/leave/#{game.roster.id}" %></td>
-            </tr>
-            <% end %>
-        </table>
+<h4>Your Upcoming Games</h4>
+
+  <table>
+    <tr>
+      <th>Location</th>
+      <th>Time</th>
+      <th>Leave Game</th>
+    </tr>
+    <% @player.upcoming_games.each do |game| %>
+    <tr>
+      <td><%= link_to game.court.name, court_games_path(game.court) %></td>
+      <td><%= game.gametime %></td>
+      <td><%= link_to "Leave game", "/leave/#{game.roster.id}" %></td>
+    </tr>
+    <% end %>
+  </table>
     
 <br><br>
 
-    <h4>Your Past Games</h4>
-        <table>
-            <tr>
-                <th>Location</th>
-                <th>Time</th>
-            </tr>
-            <% @player.past_games.each do |game| %>
-            <tr>
-                <td><%= link_to game.court.name, court_path(game.court) %></td>
-                <td><%= game.gametime %></td>
-            </tr>
-            <% end %>
-        </table>
+<h4>Your Past Games</h4>
+
+  <table>
+    <tr>
+      <th>Location</th>
+      <th>Time</th>
+    </tr>
+    <% @player.past_games.each do |game| %>
+    <tr>
+      <td><%= link_to game.court.name, court_path(game.court) %></td>
+      <td><%= game.gametime %></td>
+    </tr>
+    <% end %>
+  </table>
