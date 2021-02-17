@@ -1,15 +1,15 @@
 <h3>New Game, Roundhead</h3>
 
 <div class="form">
-    <%= form_for @game do |f| %>
-        <% if params[:court_id] %>
-            <%= f.hidden_field :court_id, :value => params[:court_id] %>
-        <% else %>
-            <%= f.label :court %>
-            <%= f.collection_select :court_id, Court.all, :id, :name  %><br><br>
-        <% end %>
-        <%= f.label :time %>
-        <%= f.datetime_field :time %><br><br>
-        <%= f.submit %>
+  <%= form_for @game do |f| %>
+    <% if params[:court_id] %>
+      <%= f.hidden_field :court_id, :value => params[:court_id] %>
+    <% else %>
+      <%= f.label :court %>
+      <%= f.collection_select :court_id, Court.all, :id, :name  %><br><br>
     <% end %>
+    <%= f.label :time %>
+    <%= f.datetime_field :time %><br><br>
+    <%= f.submit %>
+  <% end %>
 </div>

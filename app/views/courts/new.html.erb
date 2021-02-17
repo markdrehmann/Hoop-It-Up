@@ -1,19 +1,19 @@
 <h3>Add a New Court</h3>
 
 <div class="form">
-    <%= form_for @court do |f| %>
-        <%= f.label :name %>
-        <%= f.text_field :name  %>
-        <% if @court.errors[:name] %>
-            <%= @court.errors[:name].to_sentence %>
-        <% end %>
-        <br><br>
-        <%= f.label :address %>
-        <%= f.text_field :address %>
-        <% if @court.errors[:address] %>
-            <%= @court.errors[:address].to_sentence %>
-        <% end %>
-        <br><br>
-        <%= f.submit %>
+  <%= form_for @court do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name  %>
+    <% if @court.errors[:name] %>
+      <%= @court.errors[:name].to_sentence %>
     <% end %>
+    <br><br>
+    <%= f.label :address %>
+    <%= f.text_field :address %>
+    <% if @court.errors[:address] %>
+      <%= @court.errors[:address].to_sentence %>
+    <% end %>
+    <br><br>
+    <%= f.submit %>
+  <% end %>
 </div>

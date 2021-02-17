@@ -1,33 +1,33 @@
 <% if @court %>
-    <h3>Upcoming Games at <%= @court.name %></h3>
-    <p><%= @court.address %></p>
+  <h3>Upcoming Games at <%= @court.name %></h3>
+  <p><%= @court.address %></p>
 <% else %>
-    <h3>Upcoming Games</h3>
+  <h3>Upcoming Games</h3>
 <% end %>
 
 <table>
-    <tr>
-        <th>Location</th>
-        <th>Time</th>
-        <th>Who's Playing?</th>
-        <th>Join Game!</th>
-    </tr>
-    <% @upcoming_games.each do |game| %>
-    <tr>
-        <td><%= link_to game.court.name, court_games_path(game.court) %></td>
-        <td><%= game.gametime %></td>
-        <td><%= link_to "See Roster", roster_path(game.roster) %></td>
-        <td><%= link_to "Join this game", edit_roster_path(game.roster) %></td>
-    </tr>
-    <% end %>
+  <tr>
+    <th>Location</th>
+    <th>Time</th>
+    <th>Who's Playing?</th>
+    <th>Join Game!</th>
+  </tr>
+  <% @upcoming_games.each do |game| %>
+  <tr>
+    <td><%= link_to game.court.name, court_games_path(game.court) %></td>
+    <td><%= game.gametime %></td>
+    <td><%= link_to "See Roster", roster_path(game.roster) %></td>
+    <td><%= link_to "Join this game", edit_roster_path(game.roster) %></td>
+  </tr>
+  <% end %>
 </table>
 
 <br><br>
 
 <% if @court %>
-    <%= link_to "Add New Game at #{@court.name}", new_court_game_path(@court.id) %>
+  <%= link_to "Add New Game at #{@court.name}", new_court_game_path(@court.id) %>
 <% else %>
-    <%= link_to "Create New Game", new_game_path %>
+  <%= link_to "Create New Game", new_game_path %>
 <% end %>
 
 <br><br>
@@ -35,14 +35,14 @@
 <h3>Past Games</h3>
 
 <table>
-    <tr>
-        <th>Location</th>
-        <th>Time</th>
-    </tr>
-    <% @past_games.each do |game| %>
-    <tr>
-        <td><%= link_to game.court.name, court_games_path(game.court) %></td>
-        <td><%= game.gametime %></td>
-    </tr>
-    <% end %>
+  <tr>
+    <th>Location</th>
+    <th>Time</th>
+  </tr>
+  <% @past_games.each do |game| %>
+  <tr>
+    <td><%= link_to game.court.name, court_games_path(game.court) %></td>
+    <td><%= game.gametime %></td>
+  </tr>
+  <% end %>
 </table>

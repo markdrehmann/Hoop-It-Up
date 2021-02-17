@@ -1,16 +1,16 @@
 <h3>All Courts</h3>
 
 <table>
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+  </tr>
+  <% @courts.each do |court| %>
     <tr>
-        <th>Name</th>
-        <th>Address</th>
+      <td><%= link_to court.name, court_games_path(court) %></td>
+      <td><%= court.address %></td>
     </tr>
-    <% @courts.each do |court| %>
-    <tr>
-        <td><%= link_to court.name, court_games_path(court) %></td>
-        <td><%= court.address %></td>
-    </tr>
-    <% end %>
+  <% end %>
 </table>
 
 <br><br>
