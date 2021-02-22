@@ -1,6 +1,7 @@
 class CourtsController < ApplicationController
   def index
     @courts = Court.all
+    @court = Game.court_with_most_games
   end
 
   def new

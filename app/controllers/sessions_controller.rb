@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
   def login
+    @player = Player.new
   end
 
   def create
