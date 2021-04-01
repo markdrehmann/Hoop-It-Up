@@ -7,7 +7,7 @@ to create and track pickup basketball games.  It is a basic Rails project to ful
 
 Clone this repository and execute:
 
-    $bundle install
+    `bundle install`
 
 Then execute:
 
