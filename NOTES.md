@@ -2,7 +2,7 @@ Models
 
 Player (name, email, pw)
 Scope method, player with most_rosters?
-- *** has many games (through roster)?
+- has many games (through roster)?
 - has many player_rosters
 - has many rosters through players_rosters
 
