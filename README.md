@@ -1,4 +1,4 @@
-## Hoop It Up on Rails
+# Hoop It Up on Rails
 
 Welcome to Hoop It Up!  This app was created with the intention
 to create and track pickup basketball games.  It is a basic Rails project to fulfill project requirements at Flatiron School. Further functionality and development will continue in later projects.
