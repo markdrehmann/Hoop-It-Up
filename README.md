@@ -27,10 +27,10 @@ and navigate to localhost:3000 to preview the app.
 Usage of this Rails basic CRUD app is for the sole purposes of entertainment and interacting with
 a preliminary basketball scheduling app.
 
-## License
+### License
 
 The app is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
-## Code of Conduct
+### Code of Conduct
 
 Everyone interacting in the Hoop It Up on Rails project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the code of conduct.
