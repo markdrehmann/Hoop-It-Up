@@ -1,6 +1,6 @@
 Models
 
-Player (name, email, pw)
+Player (name, email, password)
 
 Scope method, player with most_rosters?
 - has many games (through roster)?
