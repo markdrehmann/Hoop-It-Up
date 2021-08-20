@@ -5,21 +5,21 @@ to create and track pickup basketball games.  It is a basic Rails project to ful
 
 ## Installation
 
-Clone this repository and execute:
+Clone this repository, navigate into its folder and execute:
 
-    `bundle install`
+    bundle install
 
 Then execute:
 
-    $rails db:migrate
+    rails db:migrate
 
 to create the database.
 
-Execute:
+To start server, execute:
 
-    $rails s
+    rails s
 
-and navigate to localhost:3000 to preview the app.
+and navigate to localhost:3000 in your browser to preview the app.
 
 
 ## Usage
