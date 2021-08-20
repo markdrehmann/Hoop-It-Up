@@ -1,3 +1,7 @@
+Removed line:
+<%= link_to "Court with Most Games", court_games_path(@court) %>
+from views/courts/index - line 3
+
 Models
 
 Player (name, email, password)

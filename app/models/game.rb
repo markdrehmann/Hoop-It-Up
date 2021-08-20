@@ -11,8 +11,8 @@ class Game < ApplicationRecord
     time.to_formatted_s(:gametime)
   end
 
-  def self.court_with_most_games
-    group(:court).count.max_by{|k,v| v}.first
-  end
+  # def self.court_with_most_games
+  #   group(:court).count.max_by{|k,v| v}.first
+  # end
 
 end
