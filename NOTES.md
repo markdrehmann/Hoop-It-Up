@@ -2,8 +2,9 @@ Removed line:
 <%= link_to "Court with Most Games", court_games_path(@court) %>
 from views/courts/index - line 3
 
-Models
+When creating a game - add feature to create new court at same time?
 
+Models
 Player (name, email, password)
 
 Scope method, player with most_rosters?
