@@ -24,7 +24,7 @@ and navigate to localhost:3000 in your browser to preview the app.
 
 ## Usage
 
-Usage of this Rails basic CRUD app is for the sole purposes of entertainment and interacting with
+Usage of this Rails basic app is for the sole purposes of entertainment and interacting with
 a preliminary basketball scheduling app.
 
 ### License
