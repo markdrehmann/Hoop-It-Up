@@ -1,7 +1,7 @@
-# Specifications for the Rails Assessment
+# Specifications
 
 Specs:
-- [x] Using Ruby on Rails for the project
+- [x] Using Ruby on Rails
 - [x] Include at least one has_many relationship -- Player has_many :player_rosters
 - [x] Include at least one belongs_to relationship -- Player_roster belongs_to :player
 - [x] Include at least two has_many through relationships -- player has_many rosters and vice versa through player_rosters
